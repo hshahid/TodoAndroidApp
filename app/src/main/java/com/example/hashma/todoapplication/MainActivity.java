@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
+import java.io.File;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -56,6 +57,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void readItems() {
-        
+        File filesDIR = getFilesDir();
     }
 }
