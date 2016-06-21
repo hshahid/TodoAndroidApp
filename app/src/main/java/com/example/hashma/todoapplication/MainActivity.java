@@ -13,7 +13,6 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     ListView lvItems;
-    EditText etNewItem;
     Button btnAddItem;
     ArrayList<String> items;
     ArrayAdapter<String> itemsAdapter;
@@ -48,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 //    }
 
     public void onAddItem(View v) {
-        etNewItem = (EditText)findViewById(R.id.etNewItem);
+        EditText etNewItem = (EditText)findViewById(R.id.etNewItem);
         String itemText = etNewItem.getText().toString();
         itemsAdapter.add(itemText);
         etNewItem.setText("");
