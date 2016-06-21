@@ -2,7 +2,6 @@ package com.example.hashma.todoapplication;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,13 +26,15 @@ public class MainActivity extends AppCompatActivity {
         items = new ArrayList<String>();
         itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items);
         lvItems.setAdapter(itemsAdapter);
+        items.add("First");
+        items.add("Second");
     }
 
 
-    public void onAddItem(View v) {
-        etNewItem = (EditText)findViewById(R.id.etNewItem);
-        String itemText = etNewItem.getText().toString();
-        itemsAdapter.add(itemText);
-        etNewItem.setText("");
-    }
+//    public void onAddItem(View v) {
+//        etNewItem = (EditText)findViewById(R.id.etNewItem);
+//        String itemText = etNewItem.getText().toString();
+//        itemsAdapter.add(itemText);
+//        etNewItem.setText("");
+//    }
 }
