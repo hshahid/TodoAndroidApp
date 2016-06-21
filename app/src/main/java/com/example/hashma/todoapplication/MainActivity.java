@@ -25,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         items = new ArrayList<String>();
-        //itemsAdapter = new ArrayAdapter<String>(this, R.layout.simple_list)
-
+        itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items)
+        lvItems.setAdapter(itemsAdapter);
     }
 
 
@@ -35,7 +35,5 @@ public class MainActivity extends AppCompatActivity {
         String itemText = etNewItem.getText().toString();
         itemsAdapter.add(itemText);
         etNewItem.setText("");
-
-
     }
 }
