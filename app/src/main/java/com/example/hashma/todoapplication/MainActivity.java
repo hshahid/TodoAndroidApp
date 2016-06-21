@@ -28,11 +28,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         lvItems = (ListView) findViewById(R.id.lvItems);
-        items = new ArrayList<>();
+        //items = new ArrayList<>();
+        readItems();
         itemsAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, items);
         lvItems.setAdapter(itemsAdapter);
-        items.add("First Item");
-        items.add("Second Item");
+//        items.add("First Item");
+//        items.add("Second Item");
         setupListViewListener();
 
     }
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
                                                    View item, int pos, long id) {
                         items.remove(pos);
                         itemsAdapter.notifyDataSetChanged();
+                        writeItems();
                         return true;
                     }
 
@@ -57,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         String itemText = etNewItem.getText().toString();
         itemsAdapter.add(itemText);
         etNewItem.setText("");
+        writeItems();
     }
 
     private void readItems() {
