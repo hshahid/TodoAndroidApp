@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                                                    View item, int pos, long id) {
                         items.remove(pos);
                         itemsAdapter.notifyDataSetChanged();
-                        re
+                        return true;
                     }
 
                 }
