@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
     private void setupListViewListener() {
         lvItems.setOnItemLongClickListener(
                 new AdapterView.OnItemLongClickListener() {
@@ -45,8 +44,7 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                     }
 
-                }
-        );
+                });
 
     }
 
