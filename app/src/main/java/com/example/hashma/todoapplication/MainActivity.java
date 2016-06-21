@@ -38,7 +38,9 @@ public class MainActivity extends AppCompatActivity {
                 new AdapterView.OnItemLongClickListener() {
                     @Override
                     public boolean onItemLongClick(AdapterView<?> adapter,
-                                                   )
+                                                   View item, int pos, long id) {
+                        
+                    }
 
                 }
         );
