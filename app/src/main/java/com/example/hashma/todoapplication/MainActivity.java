@@ -2,8 +2,6 @@ package com.example.hashma.todoapplication;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -33,16 +31,20 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void setupListViewListener(){
-        lvItems.setOnItemClickListener(
-                new AdapterView.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        
-                    }
-                }
-        );
-    }
+//    private void setupListViewListener(){
+//        lvItems.setOnItemLongClickListener(
+//                new AdapterView.OnItemLongClickListener() {
+//
+//                    @Override
+//                    public boolean OnItemLongClick(AdapterView<?> adapter,
+//                                                   View item, int pos, long id) {
+//                        items.remove(pos);
+//                        itemsAdapter.notifyDataSetChanged();
+//                        return true;
+//                    }
+//                }
+//        );
+//    }
 
 //    public void onAddItem(View v) {
 //        etNewItem = (EditText)findViewById(R.id.etNewItem);
