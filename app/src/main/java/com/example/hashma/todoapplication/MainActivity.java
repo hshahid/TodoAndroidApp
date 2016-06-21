@@ -26,8 +26,9 @@ public class MainActivity extends AppCompatActivity {
         items = new ArrayList<String>();
         itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items);
         lvItems.setAdapter(itemsAdapter);
-        items.add("First");
-        items.add("Second");
+        items.add("First Item");
+        items.add("Second Item");
+
     }
 
 
