@@ -54,4 +54,8 @@ public class MainActivity extends AppCompatActivity {
         itemsAdapter.add(itemText);
         etNewItem.setText("");
     }
+
+    private void readItems() {
+        
+    }
 }
