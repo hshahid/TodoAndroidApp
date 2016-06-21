@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText etNewItem;
     private Button btnAddItem;
     private List<String> items;
-    private ArrayAdapter itemsAdapter;
+    private ArrayAdapter<String> itemsAdapter;
 
 
     @Override
@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         items = new ArrayList<String>();
+        itemsAdapter = new ArrayAdapter<String>();
 
     }
 }
