@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         items = new ArrayList<String>();
-        itemsAdapter = new ArrayAdapter<String>();
+        //itemsAdapter = new ArrayAdapter<String>(this, R.layout.simple_list)
 
     }
 }
