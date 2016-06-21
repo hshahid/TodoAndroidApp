@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -59,5 +60,10 @@ public class MainActivity extends AppCompatActivity {
     private void readItems() {
         File filesDIR = getFilesDir();
         File todoFile = new File(filesDIR, "todo.txt");
+        try {
+            FileUtils.writeLines(todoFile, items);
+        } catch(IOException e) {
+            e.printStackTrace();
+        }
     }
 }
