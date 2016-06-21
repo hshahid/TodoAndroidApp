@@ -58,5 +58,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void readItems() {
         File filesDIR = getFilesDir();
+        File todoFile = new File(filesDIR, "todo.txt");
     }
 }
