@@ -8,23 +8,23 @@ import android.widget.EditText;
 import android.widget.ListView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ListView lvItems;
-    private EditText etNewItem;
-    private Button btnAddItem;
-    private List<String> items;
-    private ArrayAdapter<String> itemsAdapter;
+    ListView lvItems;
+    EditText etNewItem;
+    Button btnAddItem;
+    ArrayList<String> items;
+    ArrayAdapter<String> itemsAdapter;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        items = new ArrayList<String>();
-        itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items);
+        lvItems = (ListView) findViewById(R.id.lvItems);
+        items = new ArrayList<>();
+        itemsAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, items);
         lvItems.setAdapter(itemsAdapter);
         items.add("First Item");
         items.add("Second Item");
