@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
     public void onAddItem(View v) {
         etNewItem = (EditText)findViewById(R.id.etNewItem);
         String itemText = etNewItem.getText().toString();
+        itemsAdapter.add(itemText);
+        etNewItem.setText("");
 
 
     }
