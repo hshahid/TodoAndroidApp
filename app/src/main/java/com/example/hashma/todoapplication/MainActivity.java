@@ -39,7 +39,9 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public boolean onItemLongClick(AdapterView<?> adapter,
                                                    View item, int pos, long id) {
-                        
+                        items.remove(pos);
+                        itemsAdapter.notifyDataSetChanged();
+                        re
                     }
 
                 }
