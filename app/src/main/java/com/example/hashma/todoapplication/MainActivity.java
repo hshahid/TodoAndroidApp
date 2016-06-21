@@ -60,16 +60,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void readItems() {
-        File filesDIR = getFilesDir();
-        File todoFile = new File(filesDIR, "todo.txt");
+        File filesDir = getFilesDir();
+
+    }
+
+    private void writeItems() {
+        File filesDir = getFilesDir();
+        File todoFile = new File(filesDir, "todo.txt");
         try {
             FileUtils.writeLines(todoFile, items);
         } catch(IOException e) {
             e.printStackTrace();
         }
-    }
-
-    private void writeItems() {
-        File filesDir = getFilesDir();
     }
 }
